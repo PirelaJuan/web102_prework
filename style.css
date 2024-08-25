@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
 body {
-    font-family: 'Cabin';
-    background-color: #758190;
+    font-family: 'sans-serif';
+    background-color: #42455a;
+    color:#beb1b1
 }
 
 #tentacles {
@@ -11,7 +12,7 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: #42455a;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -21,10 +22,15 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: flex;
+    cursor: pointer;
+}
+.stats-container:hover{
+    box-shadow: 0 0 30px lightblue
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #102138;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -49,7 +55,7 @@ body {
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #102138;
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -59,7 +65,7 @@ body {
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px rgb(179, 208, 218);
 }
 
 #button-container {
@@ -67,9 +73,45 @@ body {
 }
 
 button {
-    font-family: 'Cabin';
+    font-family: 'sans-serif';
     border: none;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
+
+html {
+    scroll-behavior: smooth !important;
+} 
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8d95d3;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
+.back-to-top span{
+    color: black;
+    font-size: 1.5rem;
+    transition: 0.2s ease-out;
+}
+
+#unfunded-btn:hover, #funded-btn:hover, #all-btn:hover, .back-to-top:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+
